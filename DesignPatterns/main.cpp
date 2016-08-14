@@ -6,10 +6,19 @@
 //  Copyright © 2016年 heyong. All rights reserved.
 //
 
+#include "factory.hpp"
+#include "product.hpp"
+
 #include <iostream>
 
+using namespace std;
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
+    
+    Factory *fac = new ConcreteFactory();
+    
+    Product *p = fac->CreateProduct();
+    
     std::cout << "Hello, World!\n";
     return 0;
 }

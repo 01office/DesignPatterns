@@ -34,5 +34,5 @@ ConcreteFactory::~ConcreteFactory()
 
 Product *ConcreteFactory::CreateProduct()
 {
-    return ConcreteProduct();
+    return CreateProduct();
 }
