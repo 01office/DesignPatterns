@@ -7,6 +7,7 @@
 //
 
 #include "factory.hpp"
+#include "product.hpp"
 
 #include <iostream>
 
@@ -34,5 +35,5 @@ ConcreteFactory::~ConcreteFactory()
 
 Product *ConcreteFactory::CreateProduct()
 {
-    return CreateProduct();
+    return new ConcreteProduct();
 }
