@@ -17,7 +17,7 @@ int main(int argc, const char * argv[]) {
     
     Factory *fac = new ConcreteFactory();
     
-//    Product *p = fac->CreateProduct();
+    Product *p = fac->CreateProduct();
     fac->CreateProduct();
     
     std::cout << "Hello, World!\n";
