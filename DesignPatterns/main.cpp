@@ -9,6 +9,9 @@
 #include "factory.hpp"
 #include "product.hpp"
 
+#include "abstract_factory.hpp"
+#include "product_a.hpp"
+
 #include <iostream>
 
 using namespace std;
@@ -16,9 +19,15 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     
     Factory *fac = new ConcreteFactory();
-    
-    Product *p = fac->CreateProduct();
     fac->CreateProduct();
+    
+    AbstractFactory *afac1 = new ConcreteFactory1();
+    afac1->CreateProductA();
+    afac1->CreateProductB();
+    
+    AbstractFactory *afac2 = new ConcreteFactory2();
+    afac2->CreateProductA();
+    afac2->CreateProductB();
     
     std::cout << "Hello, World!\n";
     return 0;
