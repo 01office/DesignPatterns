@@ -12,6 +12,8 @@
 #include "abstract_factory.hpp"
 #include "product_a.hpp"
 
+#include "singleton.hpp"
+
 #include <iostream>
 
 using namespace std;
@@ -28,6 +30,8 @@ int main(int argc, const char * argv[]) {
     AbstractFactory *afac2 = new ConcreteFactory2();
     afac2->CreateProductA();
     afac2->CreateProductB();
+    
+    Singleton *sgn = Singleton::getInstance();
     
     std::cout << "Hello, World!\n";
     return 0;
