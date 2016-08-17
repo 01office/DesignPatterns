@@ -23,6 +23,8 @@ protected:
     
 private:
     static Singleton *m_data;
+    Singleton(const Singleton &another);
+    Singleton &operator = (const Singleton &rhs);
 };
 
 #endif /* singleton_hpp */
