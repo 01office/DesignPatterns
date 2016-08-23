@@ -29,3 +29,20 @@ void ConcreteStrategyB::AlgorithmInterface()
 {
     cout << "test ConcreteStrategyB..." << endl;
 }
+
+Contxt::Contxt(Strategy *sg)
+{
+    m_sg = sg;
+}
+
+Contxt::~Contxt()
+{
+    if (m_sg != NULL) {
+        delete m_sg;
+    }
+}
+
+void Contxt::doAction()
+{
+    m_sg->AlgorithmInterface();
+}

@@ -33,4 +33,15 @@ public:
     void AlgorithmInterface();
 };
 
+class Contxt
+{
+public:
+    Contxt(Strategy *sg);
+    ~Contxt();
+    void doAction();
+    
+private:
+    Strategy *m_sg;
+};
+
 #endif /* strategy_hpp */
