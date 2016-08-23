@@ -25,4 +25,12 @@ public:
     void AlgorithmInterface();
 };
 
+class ConcreteStrategyB: public Strategy
+{
+public:
+    ConcreteStrategyB();
+    ~ConcreteStrategyB();
+    void AlgorithmInterface();
+};
+
 #endif /* strategy_hpp */

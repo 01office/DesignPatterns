@@ -21,3 +21,11 @@ void ConcreteStrategyA::AlgorithmInterface()
 {
     cout << "test ConcreteStrategyA..." << endl;
 }
+
+ConcreteStrategyB::ConcreteStrategyB(){}
+ConcreteStrategyB::~ConcreteStrategyB(){}
+
+void ConcreteStrategyB::AlgorithmInterface()
+{
+    cout << "test ConcreteStrategyB..." << endl;
+}
