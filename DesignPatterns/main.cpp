@@ -14,6 +14,8 @@
 
 #include "singleton.hpp"
 
+#include "strategy.hpp"
+
 #include <iostream>
 
 using namespace std;
@@ -32,6 +34,15 @@ int main(int argc, const char * argv[]) {
     afac2->CreateProductB();
     
     Singleton *sgn = Singleton::getInstance();
+    
+    // test strategy pattern
+    Strategy *psa = new ConcreteStrategyA();
+    Contxt *pca = new Contxt(psa);
+    pca->doAction();
+    
+    Strategy *psb = new ConcreteStrategyB();
+    Contxt *pcb = new Contxt(psb);
+    pcb->doAction();
     
     std::cout << "Hello, World!\n";
     return 0;

@@ -14,7 +14,7 @@ class Strategy
 public:
     Strategy();
     ~Strategy();
-    virtual void AlgorithmInterface();
+    virtual void AlgorithmInterface() = 0;
 };
 
 class ConcreteStrategyA: public Strategy
