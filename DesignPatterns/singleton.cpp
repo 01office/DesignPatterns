@@ -10,7 +10,7 @@
 #include <iostream>
 using namespace std;
 
-Singleton *Singleton::m_data = 0;
+Singleton *Singleton::m_data = NULL;
 
 Singleton::Singleton()
 {
@@ -24,7 +24,7 @@ Singleton::~Singleton()
 
 Singleton *Singleton::getInstance()
 {
-    if (m_data == 0) {
+    if (m_data == NULL) {
         m_data = new Singleton();
     }
     
