@@ -20,6 +20,7 @@ public:
     
 protected:
     Singleton();
+    ~Singleton();
     
 private:
     static Singleton *m_data;

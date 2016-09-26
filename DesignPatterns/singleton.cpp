@@ -17,6 +17,11 @@ Singleton::Singleton()
     cout << "Singleton..." << endl;
 }
 
+Singleton::~Singleton()
+{
+    delete m_data;
+}
+
 Singleton *Singleton::getInstance()
 {
     if (m_data == 0) {
