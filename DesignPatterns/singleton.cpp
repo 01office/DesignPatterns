@@ -30,3 +30,17 @@ Singleton *Singleton::getInstance()
     
     return m_data;
 }
+
+/*
+Singleton *Singleton::getInstance()
+{
+    if (m_data == NULL) {
+        lock();
+        if (m_data == NULL) {
+            m_data = new Singleton();
+        }
+        unlock();
+    }
+    return m_data;
+}
+ */
