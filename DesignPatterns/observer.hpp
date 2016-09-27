@@ -44,7 +44,34 @@ private:
     std::string m_state;
 };
 
+class Subject
+{
+public:
+    Subject();
+    ~Subject();
+    virtual void Notify();
+    virtual void Attach(Observer *);
+    virtual void Detach(Observer *);
+    virtual std::string GetState();
+    virtual void SetState(std::string);
+    
+private:
+    std::list<Observer *> m_lst;
+    std::string m_state;
+};
 
+class ConcreteSubjectA : public Subject
+{
+public:
+    ConcreteSubjectA();
+    ~ConcreteSubjectA();
+};
 
+class ConcreteSubjectB : public Subject
+{
+public:
+    ConcreteSubjectB();
+    ~ConcreteSubjectB();
+};
 
 #endif /* observer_hpp */
