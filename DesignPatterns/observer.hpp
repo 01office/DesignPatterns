@@ -9,6 +9,42 @@
 #ifndef observer_hpp
 #define observer_hpp
 
-#include <stdio.h>
+#include <string>
+#include <list>
+
+class Subject;
+
+class Observer
+{
+public:
+    Observer();
+    ~Observer();
+    virtual void Update(Subject *) = 0;
+};
+
+class ConcreteObserverA : public Observer
+{
+public:
+    ConcreteObserverA();
+    ~ConcreteObserverA();
+    void Update(Subject *);
+
+private:
+    std::string m_state;
+};
+
+class ConcreteObserverB : public Observer
+{
+public:
+    ConcreteObserverB();
+    ~ConcreteObserverB();
+    void Update(Subject *);
+    
+private:
+    std::string m_state;
+};
+
+
+
 
 #endif /* observer_hpp */
