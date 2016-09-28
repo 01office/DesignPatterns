@@ -23,7 +23,7 @@
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-/*
+
     Factory *fac = new ConcreteFactory();
     fac->CreateProduct();
     
@@ -45,7 +45,7 @@ int main(int argc, const char * argv[]) {
     Strategy *psb = new ConcreteStrategyB();
     Contxt *pcb = new Contxt(psb);
     pcb->doAction();
-*/
+
     
     Observer *O1 = new ConcreteObserverA();
     Observer *O2 = new ConcreteObserverB();
