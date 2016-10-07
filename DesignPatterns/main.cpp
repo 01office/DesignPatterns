@@ -36,6 +36,10 @@ int main(int argc, const char * argv[]) {
     afac2->CreateProductB();
     
     Singleton *sgn = Singleton::getInstance();
+    Singleton *sgn1 = Singleton::getInstance();
+    if (sgn == sgn1) {
+        cout << "same" << endl;
+    }
     
     // test strategy pattern
     Strategy *psa = new ConcreteStrategyA();
