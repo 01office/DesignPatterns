@@ -44,3 +44,33 @@ Singleton *Singleton::getInstance()
     return m_data;
 }
  */
+
+/*
+class CCSingleton
+{
+private:
+    static CCSingleton *m_instance;
+    CCSingleton(){};
+    
+    class CCGarbo
+    {
+    public:
+        ~CCGarbo()
+        {
+            if (CCSingleton::m_instance) {
+                delete CCSingleton::m_instance;
+            }
+        }
+    };
+    static CCGarbo garbo;
+    
+public:
+    static CCSingleton *getInstance()
+    {
+        if (m_instance == NULL) {
+            m_instance = new CCSingleton();
+        }
+        return m_instance;
+    }
+};
+ */
