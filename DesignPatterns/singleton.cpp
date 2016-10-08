@@ -74,3 +74,22 @@ public:
     }
 };
  */
+
+// hungry type
+/*
+class hSingleton
+{
+private:
+    hSingleton(){}
+    
+public:
+    static hSingleton *getInstance()
+    {
+        static hSingleton *m_ins;
+        if (m_ins == NULL) {
+            m_ins = new hSingleton();
+        }
+        return m_ins;
+    }
+};
+*/
