@@ -18,6 +18,8 @@
 
 #include "observer.hpp"
 
+#include "simple_factory.hpp"
+
 #include <iostream>
 
 using namespace std;
@@ -67,6 +69,10 @@ int main(int argc, const char * argv[]) {
     Ps1->SetState("new");
     
     Ps1->Notify();
+    
+    SimpleFactory sf;
+    AbstractProduct *ap = sf.createProduct("A");
+    ap->use();
     
     std::cout << "Hello, World!\n";
     return 0;
