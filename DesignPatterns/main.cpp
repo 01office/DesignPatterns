@@ -71,7 +71,7 @@ int main(int argc, const char * argv[]) {
     Ps1->Notify();
     
     SimpleFactory sf;
-    AbstractProduct *ap = sf.createProduct("A");
+    AbstractProduct *ap = sf.createProduct("B");
     ap->use();
     
     std::cout << "Hello, World!\n";
