@@ -20,6 +20,7 @@
 
 #include "simple_factory.hpp"
 #include "factory_method.hpp"
+#include "adapter.hpp"
 
 #include <iostream>
 
@@ -70,16 +71,20 @@ int main(int argc, const char * argv[]) {
 //    Ps1->SetState("new");
 //    
 //    Ps1->Notify();
+//    
+//    SimpleFactory sf;
+//    AbstractProduct *ap = sf.createProduct("A");
+//    ap->use();
+//    ap = sf.createProduct("B");
+//    ap->use();
+//    
+//    AbsFactory *f1 = new LogFactory();
+//    AbsProduct *p = f1->create();
+//    p->use();
     
-    SimpleFactory sf;
-    AbstractProduct *ap = sf.createProduct("A");
-    ap->use();
-    ap = sf.createProduct("B");
-    ap->use();
-    
-    AbsFactory *f1 = new LogFactory();
-    AbsProduct *p = f1->create();
-    p->use();
+    Adaptee *adt = new Adaptee();
+    Target *tar = new Adapter(adt);
+    tar->request();
     
     std::cout << "Hello, World!\n";
     return 0;
