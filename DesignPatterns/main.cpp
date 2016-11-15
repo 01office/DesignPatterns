@@ -53,25 +53,25 @@ int main(int argc, const char * argv[]) {
 //    Strategy *psb = new ConcreteStrategyB();
 //    Contxt *pcb = new Contxt(psb);
 //    pcb->doAction();
-//
-//    
-//    Observer *O1 = new ConcreteObserverA();
-//    Observer *O2 = new ConcreteObserverB();
-//    
-//    Subject *Ps1 = new ConcreteSubjectA();
-//    Ps1->Attach(O1);
-//    Ps1->Attach(O2);
-//    
-//    Ps1->SetState("old");
-//    
-//    Ps1->Notify();
-//    
-//    Ps1->Detach(O1);
-//    
-//    Ps1->SetState("new");
-//    
-//    Ps1->Notify();
-//    
+
+    
+    Observer *O1 = new ConcreteObserverA();
+    Observer *O2 = new ConcreteObserverB();
+    
+    Subject *Ps1 = new ConcreteSubjectA();
+    Ps1->Attach(O1);
+    Ps1->Attach(O2);
+    
+    Ps1->SetState("old");
+    
+    Ps1->Notify();
+    
+    Ps1->Detach(O1);
+    
+    Ps1->SetState("new");
+    
+    Ps1->Notify();
+
 //    SimpleFactory sf;
 //    AbstractProduct *ap = sf.createProduct("A");
 //    ap->use();
